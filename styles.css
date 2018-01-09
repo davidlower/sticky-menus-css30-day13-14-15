@@ -1,0 +1,141 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   height: 100%;
+}
+
+body {
+   position: relative;
+
+   width: 960px;
+   height: 100%;
+   margin: 0 auto;
+
+   font-family: 'Poppins', sans-serif;
+   font-weight: 200;
+}
+
+.content-wrapper {
+   min-height: 100%;
+   margin-bottom: -115px;
+}
+
+.title {
+   padding: 75px 0;
+   position: absolute;
+
+}
+
+header, footer, aside {
+   position: relative;
+   text-align: center;
+   margin: 4% auto;
+
+   color: white;
+   background-color: #3dc8c0;
+
+   Width: 100%;
+}
+
+header ul li, footer ul li {
+   display: inline-block;
+
+   padding: 45px 30px;
+   padding-right: 30px;
+}
+
+/* ASIDES */
+
+.aside-left, .aside-center, .aside-right {
+   float: left;
+
+   width: 33%;
+   min-height: 350px;
+   margin-top: 0;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+
+aside li {
+   display: block;
+
+   text-align: center;
+}
+
+.aside-center {
+   position: relative;
+
+   width: 26%;
+   margin-right: 4%;
+   margin-left: 4%;
+   background-color: transparent;
+}
+
+.aside-center button {
+   display: block;
+
+   margin: 10px 0;
+}
+
+.aside-right {
+   float: right;
+}
+
+/* FOOTER */
+
+footer {
+   clear: both;
+
+   margin: 0;
+}
+
+.content-wrapper::after {
+   display: block;
+
+   content: "";
+}
+
+footer, .content-wrapper::after {
+   height: 115px;
+}
+
+
+/* BUTTONS */
+
+button {
+   padding: 10px 20px;
+   background-color: #3dc8c0;
+   color: white;
+   outline: none;
+   cursor: pointer;
+   border: none;
+   font-size: 0.8rem;
+   transition: all 0.1s ease;
+   font-weight: 200;
+   font-family: 'Poppins', sans-serif;
+   border-radius: 10px;
+
+}
+
+button:first-child:active {
+   transform: translateY(-4px);
+}
+
+button:nth-child(2):active {
+   transform: translateX(6px);
+}
+
+button:nth-child(3):active {
+   transform: translateX(-6px);
+}
+
+button:last-child:active {
+   transform: translateY(4px);
+}
