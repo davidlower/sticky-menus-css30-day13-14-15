@@ -1,12 +1,15 @@
 $("document").ready(function() {
-   $(".content-wrapper").show();
+   $(".go-back-btn").hide();
 
-   $(".btn-4").on("click", function() {
-      // $(".container") removeClass("content.wrapper");
+   $(".sticky-footer-btn").on("click", function() {
+      $(".sticky-footer-btn").hide();
+      $(".content-container").hide();
+      $(".go-back-btn").show();
    });
 
-
-
-
-
+   $(".go-back-btn").on("click", function() {
+      $(".go-back-btn").hide();
+      $(".content-container").show();
+      $(".sticky-footer-btn").show();
+   });
 });

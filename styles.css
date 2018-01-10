@@ -11,55 +11,113 @@ html {
 body {
    position: relative;
 
-   width: 960px;
+   width: 100%;
    height: 100%;
    margin: 0 auto;
+
+   /* background: url(imgs/ff0000-wallpaper-1.jpg) no-repeat center center fixed; */
+   background-size: cover;
 
    font-family: 'Poppins', sans-serif;
    font-weight: 200;
 }
 
-.content-wrapper {
+.container {
    min-height: 100%;
-   margin-bottom: -115px;
+   margin-bottom: -175px;
 }
 
+/*
 .title {
    padding: 75px 0;
    position: absolute;
-
-}
+} */
 
 header, footer, aside {
-   position: relative;
+   position: block;
+
    text-align: center;
-   margin: 4% auto;
 
    color: white;
-   background-color: #3dc8c0;
+   background-color: rgba(100, 100, 100, 0.3);
 
    Width: 100%;
 }
 
-header ul li, footer ul li {
+/* HEADER */
+
+header {
+   height: 175px;
+   position: fixed;
+   top: 0;
+}
+
+header img {
+   width: 75px;
+   height: auto;
+   transform: rotateZ(-90deg);
+   position: absolute;
+   left: 45px;
+   padding: 50px 0;
+}
+
+header li, footer li {
    display: inline-block;
 
-   padding: 45px 30px;
+   padding: 75px 30px;
    padding-right: 30px;
+   cursor: pointer;
+}
+
+header li:hover {
+   border-bottom: solid 4px red;
+   background-color: rgba(0, 0, 0, 0.1);
+   color: red;
+}
+
+/* IMAGE PORTRAITS - ONLY ADDED TO ADD PADDING FOR STICKY MENUS */
+
+.sticky-footer-btn {
+   text-decoration: none;
+   cursor: pointer;
+   z-index: 5;
+}
+
+.content-container {
+   max-width: 960px;
+   margin: auto;
+}
+
+.img-container, .img-container-2 {
+   margin: 225px auto 50px;
+   display: flex;
+   justify-content: center;
+   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.img-container img, .img-container-2 img {
+   width: 250px;
+   height: 250px;
+   margin: 25px;
+}
+
+.img-container-2 {
+   margin-top: 50px;
+   clear: both;
 }
 
 /* ASIDES */
 
-.aside-left, .aside-center, .aside-right {
+.aside-left, .aside-right {
+   display: flex;
    float: left;
+   flex-direction: column;
+   justify-content: center;
 
    width: 33%;
    min-height: 350px;
-   margin-top: 0;
    padding: 20px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+   margin: 0 auto 50px;
 }
 
 
@@ -67,21 +125,6 @@ aside li {
    display: block;
 
    text-align: center;
-}
-
-.aside-center {
-   position: relative;
-
-   width: 26%;
-   margin-right: 4%;
-   margin-left: 4%;
-   background-color: transparent;
-}
-
-.aside-center button {
-   display: block;
-
-   margin: 10px 0;
 }
 
 .aside-right {
@@ -93,49 +136,82 @@ aside li {
 footer {
    clear: both;
 
-   margin: 0;
+   height: 175px;
 }
 
-.content-wrapper::after {
+.container::after {
    display: block;
 
    content: "";
 }
 
-footer, .content-wrapper::after {
-   height: 115px;
+footer, .container::after {
+   height: 175px;
 }
 
-
-/* BUTTONS */
-
-button {
-   padding: 10px 20px;
-   background-color: #3dc8c0;
-   color: white;
-   outline: none;
+.sticky-footer-btn, .go-back-btn {
+   padding: 4px 8px;
    cursor: pointer;
+   outline: none;
    border: none;
-   font-size: 0.8rem;
-   transition: all 0.1s ease;
-   font-weight: 200;
    font-family: 'Poppins', sans-serif;
-   border-radius: 10px;
-
+   font-weight: 200;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%)
 }
 
-button:first-child:active {
-   transform: translateY(-4px);
+.go-back-btn {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%)
 }
 
-button:nth-child(2):active {
-   transform: translateX(6px);
-}
+/* ============= */
 
-button:nth-child(3):active {
-   transform: translateX(-6px);
-}
+/* MEDIA QUERIES */
 
-button:last-child:active {
-   transform: translateY(4px);
+/* ============= */
+
+@media screen and (max-width: 1000px) {
+
+   .aside-left, .aside-right, .img-container, .img-container-2 {
+      width: 90%;
+      margin: 4% auto 0;
+      float: none;
+      padding: 0;
+   }
+
+   .img-container img, .img-container-2 img {
+      display: inline-block;
+      width: 20%;
+      height: 20%;
+   }
+
+   .aside-right {
+      position: relative;
+   }
+
+   .container {
+      margin: 0;
+      padding: 0;
+   }
+
+   header {
+      display: block;
+      position: relative;
+      margin-bottom: 4%;
+   }
+
+   footer {
+      margin: 4% 0 0 0;
+      display: block;
+      position: relative;
+   }
+
+   .container::after {
+      height: 0;
+   }
 }
