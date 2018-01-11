@@ -12,6 +12,7 @@ html {
 body {
    --text-color: #222222;
    --p-color: #37DA9D;
+   --box-shad: #d6d6d6;
    position: relative;
 
    width: 100%;
@@ -45,14 +46,13 @@ header, footer {
 
 header {
    position: fixed;
-   top: 0;
    z-index: 1;
+   top: 0;
 
    height: 120px;
 
-   -webkit-box-shadow: 1px 0 5px #d6d6d6;
-
-   box-shadow: 1px 0 5px #d6d6d6;
+   -webkit-box-shadow: 1px 0 5px var(--box-shad);
+   box-shadow: 1px 0 5px var(--box-shad);
 }
 
 header img {
@@ -83,9 +83,10 @@ header li:hover {
 /* IMAGE PORTRAITS - ONLY ADDED TO ADD PADDING FOR STICKY MENUS */
 
 .content-container {
+   position: relative;
+
    max-width: 1000px;
    margin: 0 auto;
-   position: relative;
 }
 
 .title {
@@ -97,13 +98,16 @@ header li:hover {
 
 .title-box {
    display: block;
+
    width: 200px;
-   background-color: var(--p-color);
+
    transform: translateY(40px);
+   text-align: center;
+
+   color: white;
    border-top-left-radius: 10px;
    border-top-right-radius: 10px;
-   color: white;
-   text-align: center;
+   background-color: var(--p-color);
 }
 
 .img-container {
@@ -137,28 +141,35 @@ header li:hover {
 
 .aside-left {
    float: left;
+
    width: 75%;
    margin: 40px 0 0 0;
 }
 
 .aside-right {
    float: right;
+
    width: 75px;
    margin-top: 40px;
 }
 
 .aside-container {
    position: fixed;
+
    display: block;
 }
 
 .aside-right img {
+   display: block;
+
    width: 75px;
    margin-bottom: 20px;
-   -webkit-clip-path: circle(50% at 50% 50%);
-   clip-path: circle(50% at 50% 50%);
+
    cursor: pointer;
    transform: translateX(20px);
+
+   -webkit-clip-path: circle(50% at 50% 50%);
+   clip-path: circle(50% at 50% 50%);
 }
 
 /* FOOTER */
@@ -171,31 +182,32 @@ header li:hover {
 
 .sticky-footer-btn {
    display: block;
+   clear: both;
+
    width: 200px;
-   background-color: var(--p-color);
-   transform: translateY(40px);
+   height: 32px;
+
+   text-align: center;
+
+   color: white;
    border-top-left-radius: 10px;
    border-top-right-radius: 10px;
-   color: white;
-   text-align: center;
+   background-color: var(--p-color);
 }
 
 footer {
-   clear: both;
+   height: 120px;
 
-   -webkit-box-shadow: -1px 0 5px #d6d6d6;
-
-   box-shadow: -1px 0 5px #d6d6d6;
+   -webkit-box-shadow: -1px 0 5px var(--box-shad);
+   box-shadow: -1px 0 5px var(--box-shad);
 }
 
 .container::after {
    display: block;
 
-   content: "";
-}
-
-footer, .container::after {
    height: 120px;
+
+   content: "";
 }
 
 .go-back-btn {
@@ -211,6 +223,7 @@ footer, .container::after {
 
    border: none;
    outline: none;
+   background-color: transparent;
 
    font-family: 'Poppins', sans-serif;
    font-weight: 200;
@@ -224,49 +237,55 @@ footer, .container::after {
 
 /* ============= */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
 
-   .aside-left, .aside-right, .img-container {
+   .content-container {
+      width: 70%;
+   }
+
+   .aside-left, .aside-right, .aside-container, .img-container {
+      position: relative;
+
       float: none;
 
-      width: 90%;
-      margin: 4% auto 0;
+      width: 100%;
+      margin: 40px auto 0;
       padding: 0;
    }
 
    .img-container img {
-      display: inline-block;
-
-      width: 20%;
-      height: 20%;
+      width: 55%;
+      height: 55%;
    }
 
    .aside-right {
-      position: relative;
+      margin: 75px 0;
    }
 
-   .container {
-      margin: 0;
+   .aside-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
       padding: 0;
    }
 
-   header {
-      position: relative;
-
-      display: block;
-
-      margin-bottom: 4%;
+   .aside-container img {
+      width: 12%;
+      height: 12%;
+      margin: 0 4% 0 0;
    }
+}
 
-   footer {
-      position: relative;
-
-      display: block;
-
-      margin: 4% 0 0 0;
+@media screen and (max-width: 870px) {
+   header img {
+      visibility: hidden;
    }
+}
 
-   .container::after {
-      height: 0;
+@media screen and (max-width: 580px) {
+   header li, footer li {
+      padding-right: 15px;
+
+      font-size: 0.8rem;
    }
 }
