@@ -90,13 +90,14 @@ header li:hover {
 }
 
 .title {
-   margin-top: 140px;
+
    padding: 7px 0;
 
    font-size: 0.8rem;
 }
 
 .title-box {
+   margin-top: 140px;
    display: block;
 
    width: 200px;
@@ -283,9 +284,28 @@ footer {
 }
 
 @media screen and (max-width: 580px) {
-   header li, footer li {
-      padding-right: 15px;
+   html {
+      font-size: 14px;
+   }
 
-      font-size: 0.8rem;
+   header li, footer li {
+      padding: 38px 12px 38px 0;
+      margin: 0;
+   }
+
+   header, footer, .container::after {
+      height: 90px;
+   }
+
+   .container {
+      margin-bottom: -90px;
+   }
+
+   .title-box {
+      margin-top: 100px;
+   }
+
+   .aside-right {
+      margin: 40px 0;
    }
 }
