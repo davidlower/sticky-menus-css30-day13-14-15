@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
    <link rel="stylesheet" href="styles.css">
    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400" rel="stylesheet">
    <script src="jquery-3.2.1.min.js"></script>
@@ -13,19 +14,21 @@
 </head>
 
 <body>
-   <div class="container content-wrapper">
 
-      <!-- HEADER -->
-      <header>
-         <img src="imgs/logo1.png" alt="Swift bird logo">
-         <ul>
-            <li>About</li>
-            <li>Portfolio</li>
-            <li>Blog</li>
-            <li>Help</li>
-            <li>Contact</li>
-         </ul>
-      </header>
+
+   <!-- HEADER -->
+   <header>
+      <img src="img/logo1.png" alt="Swift bird logo">
+      <ul>
+         <li>About</li>
+         <li>Portfolio</li>
+         <li>Blog</li>
+         <li>Help</li>
+         <li>Contact</li>
+      </ul>
+   </header>
+
+   <div class="container content-wrapper">
       <button class="go-back-btn">Click to go back</button>
 
       <div class="content-container">
@@ -35,37 +38,44 @@
          <!-- ASIDE LEFT LARGE IMAGES -->
          <aside class="aside-left">
             <div class="img-container">
-               <img src="imgs/portrait1.jpg" alt="woman portrait">
-               <img src="imgs/portrait2.jpg" alt="woman portrait">
+               <img class="img1" src="img/woman.jpg" alt="woman portrait" srcset="img/woman@2x.jpg 2x, img/woman@3x.jpg 3x">
+               <img class="img1" src="img/glasses.jpg" alt="woman wearing sun glasses" srcset="img/glasses@2x.jpg 2x, img/glasses@3x.jpg 3x">
             </div>
             <div class="img-container">
-               <img src="imgs/portrait3.jpg" alt="woman in racing position">
-               <img src="imgs/portrait44.jpg" alt="boxer">
+               <img class="img1" src="img/start.jpg" alt="woman in racing position" srcset="img/start@2x.jpg 2x, img/star@3x.jpg 3x">
+               <img class="img1" src="img/boxer.jpg" alt="a boxer" srcset="img/boxer@2x.jpg 2x, img/boxer@3x.jpg 3x">
             </div>
             <div class="img-container">
-               <img src="imgs/portrait55.jpg" alt="woman with head in her hands">
-               <img src="imgs/portrait6.jpg" alt="man singing">
+               <img class="img1" src="img/old-woman.jpg" alt="an old woman with her head in her hands" srcset="img/old-woman@2x.jpg 2x, img/old-woman@3x.jpg 3x">
+               <img class="img1" src="img/singer.jpg" alt="a man singing" srcset="img/singer@2x.jpg 2x, img/singer@3x.jpg 3x">
+            </div>
+            <div class="navigation">
+               <a href="https://davidlower.github.io/pricing-table-css30-day10/"><i class="fas fa-angle-left"></i></a>
+               <a href="http://davidlower.co.uk/html/css3-in-30-days"><i class="fas fa-th-large"></i></a>
+               <a href="https://davidlower.github.io/modal-window-css30-day16/"><i class="fas fa-angle-right"></i></a>
             </div>
          </aside>
 
          <!-- ASIDE RIGHT SMALL IMAGES-->
          <aside class="aside-right">
             <div class="aside-container">
-               <img src="imgs/portrait1.jpg" alt="woman portrait">
-               <img src="imgs/portrait2.jpg" alt="woman portrait">
-               <img src="imgs/portrait3.jpg" alt="woman in racing position">
-               <img src="imgs/portrait44.jpg" alt="boxer">
-               <img src="imgs/portrait55.jpg" alt="woman with head in her hands">
-               <img src="imgs/portrait6.jpg" alt="man singing">
+               <img src="img/woman.jpg" alt="woman portrait">
+               <img src="img/glasses.jpg" alt="woman portrait">
+               <img src="img/start.jpg" alt="woman in racing position">
+               <img src="img/boxer.jpg" alt="boxer">
+               <img src="img/old-woman.jpg" alt="woman with head in her hands">
+               <img src="img/singer.jpg" alt="man singing">
             </div>
          </aside>
-         <div class="sticky-footer-btn">
-            <p class="footer-btn-text">Click for sticky footer</p>
-         </div>
-      </div>
-   </div>
-   </div>
 
+
+      </div>
+
+      <div class="sticky-footer-btn">
+         <p class="footer-btn-text">Click for sticky footer</p>
+      </div>
+
+   </div>
    <footer class="fixed-footer">
       <div class="footer-container">
          <ul>
